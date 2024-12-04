@@ -1,0 +1,208 @@
+/* ------------------------ General Styling Colour Font -------------------------- */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------ Navigation Bar -------------------------- */
+
+nav {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* ------------------------ Header Section -------------------------- */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header h1 {
+    color: red;
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    color: white;
+    font-size: 1.5em;
+    margin: 5px 0 15px 0;
+}
+
+/* ------------------------ Customizing Hero Button -------------------------- */
+
+#hero-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#hero-button:hover {
+    background-color: darkred;
+}
+
+/* ------------------------ Log Form Styling -------------------------- */
+
+#log-form {
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    color: white;
+}
+
+#log-form h2 {
+    color: red;
+}
+
+#log-form label {
+    color: white;
+}
+
+#log-form input,
+#log-form select,
+#log-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+#log-form input,
+#log-form select {
+    background-color: grey;
+    color: white;
+}
+
+#log-form button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+#log-form button:hover {
+    background-color: darkred;
+}
+
+/* ------------------------ Workout Log Table -------------------------- */
+
+#workout-log {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: darkgrey;
+}
+
+th,
+td {
+    border: 1px solid lightgrey;
+    padding: 8px;
+    text-align: center;
+    color: white;
+}
+
+th {
+    background-color: lightgrey;
+    color: red;
+    font-weight: bold;
+}
+
+td {
+    background-color: grey;
+}
+
+/* ------------------------ Table Buttons -------------------------- */
+
+table button {
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table button:hover {
+    background-color: darkred;
+}
+
+/* ------------------------ OAuth Section -------------------------- */
+
+.oauth-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.oauth-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4285F4; /* Google Blue */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.oauth-button:hover {
+    background-color: #306acb;
+}
+
+.oauth-button[data-provider="facebook"] {
+    background-color: #3b5998; /* Facebook Blue */
+}
+
+.oauth-button[data-provider="facebook"]:hover {
+    background-color: #2d4373;
+}
+
+.oauth-button[data-provider="github"] {
+    background-color: #333; /* GitHub Black */
+}
+
+.oauth-button[data-provider="github"]:hover {
+    background-color: #24292e;
+}
