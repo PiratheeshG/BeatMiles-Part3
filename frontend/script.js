@@ -5,7 +5,7 @@
 // Check authentication status and update navigation links
 async function checkAuth() {
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/auth/check', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/auth/check', {
             credentials: 'include'
         });
         const data = await response.json();
@@ -30,7 +30,7 @@ async function checkAuth() {
 // Logout the user
 async function logout() {
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/auth/logout', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/auth/logout', {
             method: 'POST',
             credentials: 'include'
         });
@@ -57,7 +57,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/auth/register', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ async function loginUser() {
     }
 
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/auth/login', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -138,7 +138,7 @@ async function addOrUpdateWorkout() {
         let response, data;
         if (editWorkoutId) {
             // Update existing workout
-            response = await fetch(`https://YOUR_BACKEND_URL/api/workouts/${editWorkoutId}`, {
+            response = await fetch(`https://beatmiles-backend.azurewebsites.net/api/workouts/${editWorkoutId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
@@ -154,7 +154,7 @@ async function addOrUpdateWorkout() {
             document.getElementById("add-button").textContent = "Log Workout";
         } else {
             // Add new workout
-            response = await fetch('https://YOUR_BACKEND_URL/api/workouts', {
+            response = await fetch('https://beatmiles-backend.azurewebsites.net/api/workouts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
@@ -177,7 +177,7 @@ async function addOrUpdateWorkout() {
 // Fetch all workouts for the authenticated user
 async function fetchWorkouts() {
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/workouts', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/workouts', {
             credentials: 'include'
         });
         const data = await response.json();
@@ -218,7 +218,7 @@ function displayWorkouts(workouts) {
 // Populate the form with workout data for editing
 async function populateEditWorkout(id) {
     try {
-        const response = await fetch(`https://YOUR_BACKEND_URL/api/workouts/${id}`, {
+        const response = await fetch(`https://beatmiles-backend.azurewebsites.net/api/workouts/${id}`, {
             credentials: 'include'
         });
         const data = await response.json();
@@ -248,7 +248,7 @@ async function deleteWorkout(id) {
     if (!confirm("Are you sure you want to delete this workout?")) return;
 
     try {
-        const response = await fetch(`https://YOUR_BACKEND_URL/api/workouts/${id}`, {
+        const response = await fetch(`https://beatmiles-backend.azurewebsites.net/api/workouts/${id}`, {
             method: 'DELETE',
             credentials: 'include'
         });
@@ -269,7 +269,7 @@ async function deleteWorkout(id) {
 
 // Redirect to OAuth provider
 function redirectToOAuth(provider) {
-    window.location.href = `https://YOUR_BACKEND_URL/api/auth/${provider}`;
+    window.location.href = `https://beatmiles-backend.azurewebsites.net/api/auth/${provider}`;
 }
 
 // ==================== Page Initialization ====================
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Ensure the user is authenticated before accessing the workout log
 async function checkAndProtectPage() {
     try {
-        const response = await fetch('https://YOUR_BACKEND_URL/api/auth/check', {
+        const response = await fetch('https://beatmiles-backend.azurewebsites.net/api/auth/check', {
             credentials: 'include'
         });
         const data = await response.json();
@@ -317,4 +317,5 @@ async function checkAndProtectPage() {
         console.error('Error checking auth:', error);
     }
 }
+
 
